@@ -1,0 +1,12 @@
+version: '3.5'
+
+services:
+    php:
+        container_name: swoole_php
+        build:
+            context: ./docker/swoole
+        ports:
+            - "80:80"
+        restart: always
+        volumes:
+            - ./public/index.php:/index.php
